@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="color:brown">
+        
+        <form action="{{ url_for('predict')}}",method='post'>
+            <h2>titanic project</h2>
+            <br>
+            <h3>what the class of passenger in (0 or 1 or 3) ?</h3>
+            <input id="fourth" name="pclass" required="required">    
+            <!-- it will return a str a value -->
+            <h2>what the age of passenger</h2>
+            <br>
+            <input id="second" name="age" required="required">
+            <br>
+            <h2>sibsp of passenger in boolean format (0,1)</h2>
+            <br>
+            <input id="fourth" name="sibsp" required="required">  
+            <br>
+            <h2>parch in boolean format (0,1)</h2> 
+            <br>
+            <input id="fourth" name="parch" required="required">    
+            <br>
+            <h1>you have to put 1 if you are male than , in the female columns you have to put 0</h1>
+            <h2>sex_female in boolean format (0,1)</h2>
+            <input id="fourth" name="sex_female" required="required">
+            <br>
+            <h2>sex_male in boolean formate (0,1)</h2>
+            <input id="fourth" name="sex_male" required="required">
+            <br>
+            <h1>embarked has three class (C,S,Q) you have to choose embarked just putting 1</h1>
+            <br>
+            <h2>embarked_C in boolean format (0,1)</h2>
+            <input id="fourth" name="embarked_c" required="required">
+            <br>
+            <h2>embarked_Q in boolean format (0,1)</h2>
+            <input id="fourth" name="embarked_q" required="required">
+            <br>
+            <h2>embarked_S in boolean</h2>
+            <br>
+            <input id="fourth" name="embarked_s" required="required">
+            <br>
+            <h1>embark_town has three town you have to put 1 in that town ,where are you from and other in columns put 0</h1>
+            <h2>embark_town_Cherbourg in boolean</h2>
+            <br>
+            <input id="fourth" name="embark_town_Cherbourg" required="required">
+            <br>
+            <h2>embark_town_Queenstown in boolean</h2>
+            <input id="fourth" name="embark_town_Queenstown" required="required">
+            <br>
+            <h2>embark_town_Southampton in boolean</h2>
+            <input id="fourth" name="embark_town_Southampton" required="required">
+            <h2> finally submit your record</h2>
+            <button id="sub" type="submit ">click</button>
+
+            
+
+              
+    
+
+
+
+
+        </form>
+        <br><br>
+        <h3>{{ prediction_text }}<h3>
+
+    </div>
+</body>
+</html>
